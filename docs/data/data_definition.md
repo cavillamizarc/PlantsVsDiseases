@@ -13,7 +13,7 @@ For each dataset, the links to the sample datasets in the _**Data**_ directory a
 | Dataset 1 | Kaggle dataset with a vaiety of plants and their common diseases | Datacenter allocated on a server (TBD) | [main.py](scripts/data_acquisition/main.py) | [Dataset 1 Report](scripts/data_acquisition/reports)|
 
 * Dataset1 summary
-![image showing a sample of the dataset 1](docs/data/dataset1_Sample.png "Dataset1 Sample")
+![image showing a sample of the dataset 1](dataset1_Sample.png "Dataset1 Sample")
 
 
 ## Processed Data
