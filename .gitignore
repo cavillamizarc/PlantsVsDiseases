@@ -1,7 +1,0 @@
-**/*__pycache__/*
-*.env
-env_vars*
-credentials*
-**/build/*
-.directory
-*.kate-swp

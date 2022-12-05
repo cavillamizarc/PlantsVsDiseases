@@ -6,17 +6,15 @@ For each data, an individual report describing the data schema, the meaning of e
 
 For each dataset, the links to the sample datasets in the _**Data**_ directory are also provided. 
 
-_**For ease of modifying this report, placeholder links are included in this page, for example a link to dataset 1, but they are just placeholders pointing to a non-existent page. These should be modified to point to the actual location.**_
-
 ## Raw Data Sources
 
 | Dataset Name | Original Location   | Destination Location  | Data Movement Tools / Scripts | Link to Report |
 | ---:| ---: | ---: | ---: | -----: |
-| Dataset 1 | Brief description of its orignal location | Brief description of its destination location | [script1.py](link/to/python/script/file/in/Code) | [Dataset 1 Report](link/to/report1)|
-| Dataset 2 | Brief description of its orignal location | Brief description of its destination location | [script2.R](link/to/R/script/file/in/Code) | [Dataset 2 Report](link/to/report2)|
+| Dataset 1 | Kaggle dataset with a vaiety of plants and their common diseases | Datacenter allocated on a server (TBD) | [main.py](scripts/data_acquisition/main.py) | [Dataset 1 Report](scripts/data_acquisition/reports)|
 
-* Dataset1 summary. <Provide brief summary of the data, such as how to access the data. More detailed information should be in the Dataset1 Report.>
-* Dataset2 summary. <Provide brief summary of the data, such as how to access the data. More detailed information should be in the Dataset2 Report.> 
+* Dataset1 summary
+![image showing a sample of the dataset 1](dataset1_Sample.png "Dataset1 Sample")
+
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
