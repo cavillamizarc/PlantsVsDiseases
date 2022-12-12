@@ -1,11 +1,10 @@
-# Team Data Science Project Template
+# Greeneye
 
-This template is an implementation of the Microsoft's Team Data Science Project Template that is currently used at the "Programa de Formación en Machine Learning and Data Science" at Universidad Nacional de Colombia.
+This project aims to be a tool in order yo automatically monitor and raise an early alert in crops that may be severely affected by common plant diseases.
 
-You'll need tools like `poetry` (default), `venv`, `pyenv` (default), `renv`, `conda`, among others for dependency management and resolution.
+You'll need tools like `poetry` (default)
 
-This template provides the following folders:
+## Content
 
-* `packagename`: put the source code (classes and functions) in this folder.
-* `docs`: put the documentation in this folder.
-* `scripts`: this folder must contain the scripts/notebooks that will be executed.
+* `greeneye`: package content and scripts in order to run, compile and train the model.
+* `scripts`: this folder must contain the scripts/notebooks necesary for a comprehensive use, evaluate and analyse the package, and downloading of dependencies in order to train or test it.
