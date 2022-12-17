@@ -3,8 +3,10 @@
 from argparse import ArgumentParser
 #from greeneye.database import DatasetBuilder
 #from greeneye.models.imagenet import ModelBuilder
-#from greeneye.preprocessing.imagenetPrepros import Preprocessor
+from greeneye.preprocessing.Pre import ImagenetPre
 import joblib
+import tensorflow as tf
+import numpy as np
 
 parser: ArgumentParser
 
@@ -19,6 +21,7 @@ def make_parser() -> ArgumentParser:
         "--model","-m",
         required=False, # False for the moment. Only one model available
         help="name of the deep learning architecture to use",
+        choices=list("imagenet_FT")
     )
     parser_train.add_argument(
         "--path", "-p",
@@ -50,38 +53,37 @@ def train(args):
     for k, v in args.__dict__.items():
         print(f"{k}={v}")
 
+    ## Missing support for more datasets
+    #ds = DatasetBuilder().build()
+    #X = ds.getData()
 
-
+    ## Aquí pondría condiciones para usar otros modelos...
+    ## Si tuviera otros modelos :')
+    #model = ModelBuilder.build(args.model).train(X)
+    #model.save(args.path)
 
 def predict(args):
-    print("Predicting with:")
+    print("--Predicting with:")
     for k, v in args.__dict__.items():
         print(f"{k}={v}")
 
+    print(args.model_path)
+
+    ## Loading of the model
     model = joblib.load(args.model_path)
     model.summary()
-    #X = Preprocessor().img
 
+    ## Image preprocessing
+    X = ImagenetPre.imgPreprocess(args.sample_path)
 
+    ## Prediction and decoding
+    #for a in model.predict(ims_prep):
+    #    i = a.argmax()
+    #    print(class_dict[i])
 
 
 def main():
     parser = make_parser()
     args = parser.parse_args()
-    #print("Starting")
-    """ if(args.image == "test"):
-
-        print("This is just a test")
- 
-        #
-
-   
-        #
-        #result = model.predict(X)
-        
-        #print(result)
-    else:
-        print("noi") """
-
 
 main()

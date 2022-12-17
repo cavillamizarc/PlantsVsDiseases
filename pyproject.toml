@@ -2,7 +2,7 @@
 name = "greeneye"
 version = "0.1.0"
 description = "Plant diseases detection"
-authors = ["Cesar Villamizar <cavillamizarc@gmail.com"]
+authors = ["Cesar Villamizar <cavillamizarc@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
