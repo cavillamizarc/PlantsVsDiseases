@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 #from greeneye.database import DatasetBuilder
-#from greeneye.models.imagenet import ModelBuilder
+from greeneye.models.models import Imagenet
 from greeneye.preprocessing.Pre import ImagenetPre
 import joblib
 import tensorflow as tf
@@ -62,6 +62,7 @@ def train(args):
     #model = ModelBuilder.build(args.model).train(X)
     #model.save(args.path)
 
+## ie: python cli.py predict --mp "./greeneyeModel.joblib" -sp "./greeneye/database/DB/test/test/CornCommonRust1.JPG"
 def predict(args):
     print("--Predicting with:")
     for k, v in args.__dict__.items():
@@ -70,7 +71,7 @@ def predict(args):
     print(args.model_path)
 
     ## Loading of the model
-    model = joblib.load(args.model_path)
+    model = joblib.load(args.model_path, mmap_mode='r')
     model.summary()
 
     ## Image preprocessing
