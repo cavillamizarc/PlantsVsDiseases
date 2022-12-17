@@ -1,5 +1,16 @@
+build/*
+dist/*
+*.egg*/*
+.venv/*
 **/*__pycache__/*
 *.env
 env_vars*
 credentials*
 **/build/*
+*.kate-swp
+.directory
+*.lock
+*.ipynb
+**/*.ipynb_checkpoints/*
+greeneye/database/DB/*
+*.joblib
