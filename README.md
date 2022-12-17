@@ -8,3 +8,4 @@ You'll need tools like `poetry` (default)
 
 * `greeneye`: package content and scripts in order to run, compile and train the model.
 * `scripts`: this folder must contain the scripts/notebooks necesary for a comprehensive use, evaluate and analyse the package, and downloading of dependencies in order to train or test it.
+    

@@ -13,3 +13,4 @@ credentials*
 *.ipynb
 **/*.ipynb_checkpoints/*
 greeneye/database/DB/*
+*.joblib

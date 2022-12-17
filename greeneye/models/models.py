@@ -6,24 +6,13 @@ from sklearn.cluster import (
         )
 from sklearn.mixture import GaussianMixture
 from enum import Enum
+import imagenet.Imagenet
 
-class ModelEnum(Enum):
-    KMEANS = "imagenet"
-    
-models = {
-        ModelEnum.KMEANS: KMeans,
-        ModelEnum.SPECTRAL: SpectralClustering,
-        ModelEnum.GMM: GaussianMixture
-        }
-predict_models = (
-        ModelEnum.KMEANS, ModelEnum.GMM
-        )
-
-class BaseEstimator(Protocol):
+class GEModel(Protocol):
     labels_: Array
 
     @abstractmethod
-    def fit(self, X: Array) -> "BaseEstimator":
+    def fit(self, X: Array) -> "GEModel":
         ...
 
     @abstractmethod
@@ -31,20 +20,15 @@ class BaseEstimator(Protocol):
         ...
 
 class ModelBuilder:
-    model: BaseEstimator
+    model: GEModel
     
-    def __init__(
-            self,
-            model_type: ModelEnum,            
-            ):
-        self.model_type = model_type        
-        
+    def __init__(self,):
 
-    def build(self) -> "ModelBuilder":
-        self.model = models[self.model_type](self.n_clusters)
+    def build(self) -> "GEModel":
+        self.model = Imagenet()
         return self
 
-    def train(self, X: Array) -> "ModelBuilder":
+    def train(self, X: Array) -> "GEModel":
         self.model.fit(X)
         return self
 
